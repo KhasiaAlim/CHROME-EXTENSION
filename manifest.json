@@ -1,0 +1,33 @@
+{
+    "name": "KA's Theme Tabs",
+    "description": "A customized Theme tabs made by Khasia Alim.",
+    "manifest_version": 3,
+    "version": "1.0",
+    "icons": {
+        "16": "./images/logo-red-16.png",
+        "32": "./images/logo-red-32.png",
+        "48": "./images/logo-red-48.png",
+        "128": "./images/logo-red-128.png"
+    },
+    "background": {
+        "service_worker": "./background.js"
+    },
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icons": {
+            "16": "./images/logo-red-16.png",
+            "32": "./images/logo-red-32.png",
+            "48": "./images/logo-red-48.png",
+            "128": "./images/logo-red-128.png"
+        }
+    },
+    "chrome_url_overrides": {
+        "newtab": "./newtab.html"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting",
+        "storage"
+    ]
+}
