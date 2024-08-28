@@ -28,3 +28,14 @@ body {
 #icon {
     height: 5px;
 }
+
+#img {
+    font-size: 5px;
+}
+
+.list-menus>li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 12px;
+    vertical-align: middle;
+}
