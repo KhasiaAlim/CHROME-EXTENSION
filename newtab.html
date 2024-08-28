@@ -15,17 +15,51 @@
         <br />
         <br />
         <br />
-        <div class="fields-1">
+        <!-- MAIN LOGIN SCREEN 1 -->
+        <div id="fields-1" class="fade-in">
             <h1 style="font-size: 40px; font-weight: 300;">Hello! What's your name?</h1>
             <div class="input">
-                <input type="text" id="input-field" required>
+                <input type="text" id="username" class="input-field" required>
                 <div class="line"></div>
-                <br/>
+                <br />
                 <p style="font-weight: 200;">Please enter the first name or name you prefer to be called</p>
-                <br/>
-                <button id="btn1">Continue &nbsp;<span>></span></button>
+                <br />
+                <button id="btn1" class="btn">Continue &nbsp;<span>></span></button>
             </div>
         </div>
+        <!-- MAIN LOGIN SCREEN 2 -->
+        <div id="fields-2" class="hidden">
+            <h3 style="font-size: 20px; font-weight: 500; opacity: 0.85;">KA'S THEME TABS ACCOUNT</h1>
+            <h1 style="font-size: 40px; font-weight: 300;">What's your email?, <span id="your-name"></span></h1>
+            <div class="input">
+                <input type="email" id="email" class="input-field" required>
+                <div class="line"></div>
+                <br />
+                <p style="font-weight: 200;">Enter your email to create KA's Theme Tabs Account</p>
+                <br />
+                <button id="btn2" class="btn">Continue &nbsp;<span>></span></button>
+            </div>
+        </div>
+        <!-- MAIN LOGIN SCREEN 3 -->
+        <div id="fields-3" class="hidden">
+            <h3 style="font-size: 20px; font-weight: 500; opacity: 0.85;">SIGNING IN</h3>
+            <h1 style="font-size: 40px; font-weight: 300;">Enter your Password <span id="your-name"></span></h1>
+            <div class="input">
+                <input type="password" id="password" class="input-field" required>
+                <div class="line"></div>
+                <br />
+                <p style="font-weight: 200;">Enter your email to create KA's Theme Tabs Account</p>
+                <br />
+                <button id="btn3" class="btn">Sign in &nbsp;<span>></span></button>
+            </div>
+        </div>
+        <!-- MAIN LOGIN SCREEN 4 -->
+        <div id="main-content" class="hidden">
+            <h2 style="font-size: 80px; font-weight: 700; margin-bottom: 10px;"></h2>
+            <h1 style="font-size: 30px; font-weight: 400; margin-top: 10px;" id="greeting"><span id="your-name"></span></h1>
+        </div>
+    </div>
+    <script src="newtab.js"></script>
 </body>
 
 </html>
