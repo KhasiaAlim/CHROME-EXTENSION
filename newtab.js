@@ -1,4 +1,6 @@
 
+// ------- TRANSITIONS BETWEEN DIVS ------- //
+
 document.getElementById('btn1').addEventListener('click', function() {
     const loginPage1 = document.getElementById('fields-1');
     const loginPage2 = document.getElementById('fields-2');
@@ -92,3 +94,41 @@ function updateTime() {
         timeDisplay.textContent = `${hours}:${minutes}`;
     }, 1000);
 }
+
+// ------- BACKGROUND ------- //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backgrounds = [
+        './images/backgrounds/1.png',
+        './images/backgrounds/2.png',
+        './images/backgrounds/3.png',
+        './images/backgrounds/4.png',
+        './images/backgrounds/5.png'
+    ];
+
+    let currentIndex = 0;
+    const backgroundSelect = document.getElementById('background-select');
+
+    function changeBackground() {
+        const selectedBackground = backgroundSelect.value;
+        
+        if (selectedBackground === 'auto') {
+            document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+
+            const randomTime = Math.floor(Math.random() * (1800000 - 1200000 + 1)) + 1200000;
+            setTimeout(changeBackground, randomTime);
+        } else {
+            document.body.style.backgroundImage = `url(${selectedBackground})`;
+        }
+    }
+
+    backgroundSelect.addEventListener('change', () => {
+        if (backgroundSelect.value !== 'auto') {
+            clearTimeout(changeBackground.timeoutId);
+        }
+        changeBackground();
+    });
+
+    changeBackground();
+});

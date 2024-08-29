@@ -20,6 +20,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 1s ease-in-out;
 }
 
 #img-logo {
@@ -98,4 +102,23 @@ body {
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+#background-settings {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #ffffff;
+    color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#background-settings select,
+#background-settings input {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
 }

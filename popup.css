@@ -39,3 +39,21 @@ body {
     margin: 0 12px;
     vertical-align: middle;
 }
+
+#open-new-tab {
+    background-color: transparent;
+    border: 1px solid var(--MAIN-COLOR-1);
+    border-radius: 50px;
+    color: var(--MAIN-COLOR-1);
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: auto;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    width: 170px;
+    cursor: pointer;
+}
